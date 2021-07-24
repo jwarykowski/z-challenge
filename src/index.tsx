@@ -27,6 +27,8 @@ const httpLink = new HttpLink({ uri: url });
 
 const link = ApolloLink.from([authLink, httpLink]);
 
+// NOTE: Offline support is not available for this @apollo/client versions.
+// https://github.com/awslabs/aws-mobile-appsync-sdk-js#using-authorization-and-subscription-links-with-apollo-client-no-offline-support
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link,
