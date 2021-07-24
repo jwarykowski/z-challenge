@@ -51,4 +51,4 @@ export function RoleListItem(props: RoleListItemProps) {
   );
 }
 
-export default RoleListItem
+export default RoleListItem;

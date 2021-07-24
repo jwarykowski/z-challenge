@@ -9,7 +9,7 @@ import { LIST_ZELLER_CUSTOMERS } from "../graphql/queries";
 test("renders role title header", () => {
   expect.assertions(1);
 
-  const role = 'Superadmin';
+  const role = "Superadmin";
 
   const { getByText } = render(
     <MockedProvider addTypename={false}>
@@ -97,8 +97,8 @@ test("renders customer list when request successful", async () => {
   );
 
   await waitFor(() => {
-    expect(queryByText('Loading users...')).not.toBeInTheDocument()
-  })
+    expect(queryByText("Loading users...")).not.toBeInTheDocument();
+  });
 
   expect(container.firstChild).toMatchSnapshot();
 });

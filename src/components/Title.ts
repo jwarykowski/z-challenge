@@ -6,4 +6,4 @@ export const Title = styled.h1`
   font-weight: bold;
 `;
 
-export default Title
+export default Title;

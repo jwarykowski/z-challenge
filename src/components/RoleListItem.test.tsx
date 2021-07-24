@@ -18,10 +18,10 @@ test("renders role list item component", () => {
     />
   );
 
-  const input = getByTestId("Testing") as HTMLInputElement
+  const input = getByTestId("Testing") as HTMLInputElement;
 
   expect(getByText("Testing")).toBeInTheDocument();
-  expect(input.checked).toEqual(true)
+  expect(input.checked).toEqual(true);
   expect(container.firstChild).toMatchSnapshot();
 });
 
@@ -41,9 +41,9 @@ test("input is unselected when is selected is false", async () => {
     />
   );
 
-  const input = getByTestId("Testing") as HTMLInputElement
+  const input = getByTestId("Testing") as HTMLInputElement;
 
-  expect(input.checked).toEqual(false)
+  expect(input.checked).toEqual(false);
 });
 
 test("calls handle on change when input changed", () => {

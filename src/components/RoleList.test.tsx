@@ -26,11 +26,9 @@ test("calls set role when admin label clicked", () => {
   const role = ZELLER_MANAGER;
   const setRole = jest.fn();
 
-  const { getByText } = render(
-    <RoleList role={role} setRole={setRole} />
-  );
+  const { getByText } = render(<RoleList role={role} setRole={setRole} />);
 
-  fireEvent.click(getByText(/Admin/))
+  fireEvent.click(getByText(/Admin/));
 
   expect(setRole).toBeCalledTimes(1);
   expect(setRole).toBeCalledWith(ZELLER_ADMIN);
@@ -39,14 +37,12 @@ test("calls set role when admin label clicked", () => {
 test("calls set role when manager label clicked", () => {
   expect.assertions(2);
 
-  const role = ZELLER_ADMIN
+  const role = ZELLER_ADMIN;
   const setRole = jest.fn();
 
-  const { getByText } = render(
-    <RoleList role={role} setRole={setRole} />
-  );
+  const { getByText } = render(<RoleList role={role} setRole={setRole} />);
 
-  fireEvent.click(getByText(/Manager/))
+  fireEvent.click(getByText(/Manager/));
 
   expect(setRole).toBeCalledTimes(1);
   expect(setRole).toBeCalledWith(ZELLER_MANAGER);

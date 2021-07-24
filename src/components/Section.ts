@@ -5,4 +5,4 @@ export const Section = styled.section`
   margin-bottom: 2.5rem;
 `;
 
-export default Section
+export default Section;

@@ -7,15 +7,11 @@ import { ZELLER_ADMIN } from "../constants";
 test("renders customer list item component", () => {
   expect.assertions(4);
 
-  const name = "Jonathan Warykowski"
-  const role = ZELLER_ADMIN
+  const name = "Jonathan Warykowski";
+  const role = ZELLER_ADMIN;
 
   const { container, getByText } = render(
-    <CustomerListItem
-      key="customer1"
-      name={name}
-      role={role}
-    />
+    <CustomerListItem key="customer1" name={name} role={role} />
   );
 
   const customerInitial = getByText(name.charAt(0).toUpperCase());

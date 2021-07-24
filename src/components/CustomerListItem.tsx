@@ -72,4 +72,4 @@ export function CustomerListItem(props: CustomerListItemProps) {
   );
 }
 
-export default CustomerListItem
+export default CustomerListItem;

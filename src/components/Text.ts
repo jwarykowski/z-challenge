@@ -5,4 +5,4 @@ export const Text = styled.p`
   font-size: 1.5em;
 `;
 
-export default Text
+export default Text;

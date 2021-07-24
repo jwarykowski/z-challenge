@@ -1,11 +1,11 @@
 import { MockedProvider } from "@apollo/client/testing";
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 
-import App from './App';
+import App from "./App";
 import { ZELLER_ADMIN } from "./constants";
 
-test('renders app component', () => {
-  expect.assertions(1)
+test("renders app component", () => {
+  expect.assertions(1);
 
   const { container } = render(
     <MockedProvider addTypename={false}>
@@ -16,8 +16,8 @@ test('renders app component', () => {
   expect(container.firstChild).toMatchSnapshot();
 });
 
-test('sets admin radio as selected by default', () => {
-  expect.assertions(1)
+test("sets admin radio as selected by default", () => {
+  expect.assertions(1);
 
   const { getByTestId } = render(
     <MockedProvider addTypename={false}>
@@ -25,7 +25,7 @@ test('sets admin radio as selected by default', () => {
     </MockedProvider>
   );
 
-  const input = getByTestId(ZELLER_ADMIN) as HTMLInputElement
+  const input = getByTestId(ZELLER_ADMIN) as HTMLInputElement;
 
-  expect(input.checked).toEqual(true)
+  expect(input.checked).toEqual(true);
 });
