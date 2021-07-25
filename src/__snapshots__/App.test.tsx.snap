@@ -18,7 +18,7 @@ exports[`renders app component 1`] = `
     >
       <input
         checked=""
-        class="sc-iqAclL eDPYBu"
+        class="sc-iqAclL XSvGs"
         data-testid="Admin"
         id="Admin"
         name="role"
@@ -35,7 +35,7 @@ exports[`renders app component 1`] = `
       for="Manager"
     >
       <input
-        class="sc-iqAclL eDPYBu"
+        class="sc-iqAclL XSvGs"
         data-testid="Manager"
         id="Manager"
         name="role"

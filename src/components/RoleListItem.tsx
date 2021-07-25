@@ -24,7 +24,7 @@ const Label = styled.label<LabelProps>`
 const RadioInput = styled.input`
   height: 2rem;
   margin: 0 1.5rem 0 0;
-  width: 2em;
+  width: 2rem;
 `;
 
 interface RoleListItemProps {

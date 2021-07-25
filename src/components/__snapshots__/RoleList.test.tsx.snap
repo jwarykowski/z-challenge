@@ -55,7 +55,7 @@ exports[`renders role list component 1`] = `
 .c3 {
   height: 2rem;
   margin: 0 1.5rem 0 0;
-  width: 2em;
+  width: 2rem;
 }
 
 .c0 {
