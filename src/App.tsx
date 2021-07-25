@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import styled from "styled-components";
+
+import CustomerList from "./components/CustomerList";
+import RoleList from "./components/RoleList";
+import { ZellerRoles } from "./types";
+import { ZELLER_ADMIN } from "./constants";
+
+const HorizontalRule = styled.hr`
+  border-top: 1px solid #e2e8f0;
+`;
+
+const Main = styled.main`
+  padding: 2rem;
+`;
 
 function App() {
+  const [role, setRole] = useState<ZellerRoles>(ZELLER_ADMIN);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Main>
+      <RoleList role={role} setRole={setRole} />
+      <HorizontalRule />
+      <CustomerList role={role} />
+      <HorizontalRule />
+    </Main>
   );
 }
 
