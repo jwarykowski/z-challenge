@@ -27,10 +27,17 @@ interface CustomerListProps {
 export function CustomerList(props: CustomerListProps) {
   const { role } = props;
 
+  // NOTE: the apollo client will return cached local results following the
+  // initial successful fetch, to ensure the data is up to date you are able to
+  // refetch this on command or poll the backend, I've left this out to keep
+  // this simple for now.
   const { loading, error, data } = useQuery<ListZellerCustomersData>(
     LIST_ZELLER_CUSTOMERS
   );
 
+  // NOTE: the graphapi call returns all customers regardless of role type, to
+  // remove the filtering below and improve performance/efficiency I would
+  // update the api call to return all users of a particular role type.
   const items = data?.listZellerCustomers?.items || [];
   const customersByRole = items.filter((item: any) => item.role === role);
   const title = `${role} Users`;
