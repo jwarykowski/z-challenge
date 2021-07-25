@@ -81,5 +81,7 @@ to run these please see the commands below:
 * System tests:  `yarn test:cypress`
 * Typechecking: `yarn tsc --noEmit`
 
+Note when running system tests ensure local application is running.
+
 ### Production Build
 Open [https://z-challenge.netlify.app/](https://z-challenge.netlify.app/) to view the latest production version in the browser.
